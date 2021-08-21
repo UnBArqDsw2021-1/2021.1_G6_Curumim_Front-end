@@ -1,9 +1,9 @@
 NOME_IMAGEM     := curumim-front-end
 
 # Subir docker e rodar aplicação na porta 3000
-rodar: .rodando assistir
+rodar: .container-rodando assistir
 
-.rodando:
+.container-rodando:
 	@sudo docker-compose build
 	@echo "Buildando Containers Docker."
 	@sudo docker-compose up -d
@@ -11,15 +11,15 @@ rodar: .rodando assistir
 	@touch .rodando
 	@echo "Containers Docker estão rodando."
 
-subir-docker: .rodando
+subir-docker: .container-rodando
 
-assistir: .rodando
+assistir: .container-rodando
 	@sudo docker exec -it $(NOME_IMAGEM) yarn run start
 
-testar: .rodando
+testar: .container-rodando
 	@sudo docker exec -it $(NOME_IMAGEM) yarn run test
 
-build: .rodando
+build: .container-rodando
 	@sudo docker exec -it $(NOME_IMAGEM) yarn run build
 
 parar:
