@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  curumim-pwa:
+    image: curumim-front-end
+    container_name: curumim-front-end
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/:/app
+    entrypoint: "tail -f /dev/null"
