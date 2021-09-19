@@ -1,10 +1,67 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    outline: 0;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+#root {
+    width: 100%;
+    height: 100%;
+
+    --main-color:#483EC8;
+    --main-radius: 20px
+}
+
+html, body, #app{
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    width: 100%; 
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    color: #000000;
+    font-size: 18px;
+    background-color: #ffffff;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+select, input, button {
+    text-decoration: none;
+    box-shadow: 0 0 0 0;
+    border: 0;
+    outline: 0;
+}
+
+.main-button {
+    background-color: black;
+}
+
+.option-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: var(--main-radius);
+    color: var(--main-color);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+span {
+    font-size: 20px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: bold;
 }
