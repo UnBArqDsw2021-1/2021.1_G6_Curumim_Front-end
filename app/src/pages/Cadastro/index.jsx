@@ -7,7 +7,7 @@ class Cadastro extends Component {
         return (
             <section class='cadastro-page'>
                 <form>
-                    <h1>Cadastro</h1>
+                    <h1 class="title">Cadastro</h1>
                     
                     <div class="divInputs">
                         <span>Nome</span>

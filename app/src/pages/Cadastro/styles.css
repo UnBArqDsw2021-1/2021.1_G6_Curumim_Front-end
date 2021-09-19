@@ -35,7 +35,7 @@ form {
     padding: 0 30px;
 }
 
-h1 {
+.title {
     margin-bottom: 30px;
     height: 50px;
     color:#fff;
@@ -47,7 +47,7 @@ button {
 }
 
 @media only screen and (min-width:500px) {
-    h1 {
+    .title {
         color: var(--main-color);
     }
     .divInputs span{
