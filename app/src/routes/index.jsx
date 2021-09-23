@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 
+import Login from '../pages/Login';
+import Register from '../pages/Register';
 import ClassList from '../pages/ClassList';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
-import Login from '../pages/Login';
 
 class Routes extends Component {
   render() {
@@ -14,6 +15,7 @@ class Routes extends Component {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/register" component={Register} />
         <Route exact path="/listar-turmas" component={ClassList} />
         <Route exact path="/detalhe-evento" component={EventDetail} />
         <Route exact path="/menu-responsavel" component={ResponsibleMenu} />

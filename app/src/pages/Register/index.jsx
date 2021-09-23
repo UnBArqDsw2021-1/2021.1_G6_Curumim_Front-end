@@ -2,29 +2,36 @@ import React, { Component } from 'react';
 import Header from '../../components/Header';
 import './styles.css';
 
-class Login extends Component {
+class Register extends Component {
     render() {
         return (
-            <div id="divLogin" className="formRegisterLogin">
+            <div id="divRegister" className="formRegisterLogin">
                 <Header />
+                <h1>Cadastro</h1>
                 <form>
                     <div>
+                        <label className="defaultLabel" for="name">Nome</label>
+                        <input className="defaultInput" id="name" type="text" placeholder="Nome"/>
+
                         <label className="defaultLabel" for="email">Email</label>
                         <input className="defaultInput" id="email" type="email" placeholder="Email"/>
+
+                        <label className="defaultLabel" for="cpf">CPF</label>
+                        <input className="defaultInput" id="cpf" type="number" placeholder="CPF"/>
 
                         <label className="defaultLabel" for="password">Senha</label>
                         <input className="defaultInput" id="password" type="password" placeholder="Senha"/>
 
-                        <div className="forgotPassword">
-                            Esqueceu sua senha?
-                        </div>
                         <button className="defaultButton" type="submit">
-                            Login
+                            Cadastrar
                         </button>
                     </div>
+                    
                     <div className="notRegistered">
-                            Ainda não é cadastrado?&nbsp;
-                            <a href="/cadastrar">Cadastre-se aqui</a>
+                        <div>
+                            Já é cadastrado?&nbsp;
+                            <a href="/cadastrar">Clique aqui.</a>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -32,4 +39,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Register;
