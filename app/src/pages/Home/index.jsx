@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
 import './styles.css';
 
-import loadADMProfile from "../../utils/adm"
+/* import loadADMProfile from "../../services/admAPIRequests" */
 
 class Home extends Component {
-
-    ADM = {
-        name: 'Bruno Alves Félix',
-    };
-    
-    loadADM = async () => {
-        const postsAndPhotos = await loadADMProfile();
-    }
+    /* loadADM = async () => {
+        const admProfile = await loadADMProfile();
+    } */
     render() {
         return (
             <section class='home-page'>

@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './styles.css';
 import '../../styles/global-styles.css';
 
-class Cadastro extends Component {
+class Register extends Component {
     render() {
         return (
-            <section class='cadastro-page'>
+            <section class='register-page'>
                 <form>
-                    <h1 class="title">Cadastro</h1>
+                    <h1 class="title">Register</h1>
                     
-                    <div class="divInputs">
+                    <div class="div-inputs">
                         <span>Nome</span>
                         <input type="text" name="Nome" placeholder="Nome" required="true"/>
 
@@ -30,4 +30,4 @@ class Cadastro extends Component {
     }
 }
 
-export default Cadastro;
+export default Register;
