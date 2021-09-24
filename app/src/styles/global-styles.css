@@ -99,3 +99,47 @@ button {
     margin: 30px 0 ;
     border: 1px solid var(--main-color);
 }
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.formRegisterLogin {
+    background-color: #6D65D3;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    color: white;
+    overflow-y: hidden;
+}
+
+.defaultInput {
+    text-indent: 3vw;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3vh;
+    font-size: 1.25rem;
+    width: 80%;
+    height: 5.2vh;
+    border: none;
+    border-radius: 3vh;
+}
+
+.defaultLabel {
+    display: block;
+    margin-bottom: .5vh;
+    margin-left: 10vw;
+    font-size: 1.5rem;
+}
+
+.defaultButton {
+    color: #6D65D3;
+    font-size: 1rem;
+    margin-right: 10vw;
+    background-color: #FFFFFF;
+    height: 5.2vh;
+    width: 25vw;
+    border: none;
+    border-radius: 10vh;
+}

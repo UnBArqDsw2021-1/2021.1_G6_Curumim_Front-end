@@ -1,0 +1,22 @@
+#divLogin {
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+}
+
+.forgotPassword {
+    margin-left: 10vw;
+}
+
+.notRegistered {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.notRegistered a {
+    color: #47EC1A;
+}
+
+button {
+    float: right;
+}
