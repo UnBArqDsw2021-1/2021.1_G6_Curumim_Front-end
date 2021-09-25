@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import './styles.css';
 
-export default function EventDetail(props) {
+export default function ActivityDetail(props) {
     let state = {
         eventName: "Festa Junina",
         date: "05/08",

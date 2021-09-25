@@ -4,9 +4,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
+import CardComponent from "../../components/Card/index";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -60,29 +58,16 @@ export default function ResponsibleMenu() {
       </Box>
       <TabPanel value={value} index={0}>
         <h2>Atividades</h2>
-        <Card>
-            <CardContent>
-              <Typography variant={"h6"}>
-                Nome da atividade
-              </Typography>
-              <Typography variant={"caption"}>
-                Data
-              </Typography>
-              <Typography variant={"caption"}>
-                Descricao - Tipo
-              </Typography>
-              <Button>Detalhes</Button>
-            </CardContent>
-        </Card>
+        <CardComponent activityName="Atividade 1" date="30/05/2021" description="Descricao da atividade 1" type="activity" id="1"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
         <h2>Eventos</h2>
+        <CardComponent activityName="Evento 1" date="30/05/2021" description="Descricao da evento 1" type="event" id="2"/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <h2>Agenda</h2>
+        <CardComponent activityName="Agenda 1" date="30/05/2021" description="Descricao da agenda 1" type="schedule" id="3"/>
       </TabPanel>
     </Fragment>
   );
 }
-
-// export default ResponsibleMenu;
