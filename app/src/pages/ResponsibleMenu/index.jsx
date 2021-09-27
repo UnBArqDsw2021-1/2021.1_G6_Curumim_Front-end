@@ -5,6 +5,10 @@ import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import CardComponent from "../../components/Card/index";
+import Api from "../../services/rspAPIRequests";
+import Brick from "../../assets/images/brick.png";
+import Calendar from "../../assets/images/calendar.png";
+import RedFlag from "../../assets/images/red-flag.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -39,6 +43,12 @@ function a11yProps(index) {
   };
 }
 
+function renderCards(activities, type){
+  return activities.map((val) => {
+    return <CardComponent key={val.id} activityName={val.nome} date={val.data} description={val.descricao} type={type} id={val.id}/>
+  });
+}
+
 export default function ResponsibleMenu() {
   const [value, setValue] = useState(0);
 
@@ -46,27 +56,33 @@ export default function ResponsibleMenu() {
     setValue(newValue);
   };
 
+  let activities = Api.getActivities;
+  let events = Api.getEvents;
+  let schedules = Api.getSchedules;
+
   return (
     <Fragment>
       <div> NavBar </div>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Atividades" {...a11yProps(0)} />
-          <Tab label="Eventos" {...a11yProps(1)} />
-          <Tab label="Agenda" {...a11yProps(2)} />
+          <Tab icon={<img alt="" src={ Brick } />} {...a11yProps(0)}></Tab>
+          <Tab icon={<img alt="" src={ RedFlag } />} {...a11yProps(1)} />
+          <Tab icon={<img alt="" src={ Calendar } />} {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
         <h2>Atividades</h2>
-        <CardComponent activityName="Atividade 1" date="30/05/2021" description="Descricao da atividade 1" type="activity" id="1"/>
+        { renderCards(activities, "activity") }
       </TabPanel>
+
       <TabPanel value={value} index={1}>
         <h2>Eventos</h2>
-        <CardComponent activityName="Evento 1" date="30/05/2021" description="Descricao da evento 1" type="event" id="2"/>
+        { renderCards(events, "event") }
       </TabPanel>
+
       <TabPanel value={value} index={2}>
         <h2>Agenda</h2>
-        <CardComponent activityName="Agenda 1" date="30/05/2021" description="Descricao da agenda 1" type="schedule" id="3"/>
+        { renderCards(schedules, "schedule") }
       </TabPanel>
     </Fragment>
   );
