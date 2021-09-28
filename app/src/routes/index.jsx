@@ -19,8 +19,8 @@ class Routes extends Component {
         <Route exact path="/cadastro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/lista-turmas" component={ClassList} />
-        <Route exact path="/detalhe-evento/:value" component={EventDetail} />
-        <Route exact path="/detalhe-atividade/:value" component={ActivityDetail} />
+        <Route exact path="/detalhe-evento" component={EventDetail} />
+        <Route exact path="/detalhe-atividade" component={ActivityDetail} />
         <Route exact path="/detalhe-agenda/:value" component={ScheduleDetail} />
         <Route exact path="/menu-responsavel" component={ResponsibleMenu} />
       </Switch>
