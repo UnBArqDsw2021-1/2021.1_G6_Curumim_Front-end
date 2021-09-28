@@ -14,10 +14,12 @@ class ClassList extends Component {
         return (
             <Fragment>
             	<div>NavBar</div>
-            	<h2>Turmas</h2>
-            	<ul>
-            		{ this.state.classes.map(item => <li>Turma {item}</li>) }
-            	</ul>
+            	<header className="App-header-lista-turma">
+					<h2 className="title">Turmas</h2>
+					<ul className="classList">
+						{ this.state.classes.map(item => <li>Turma {item}</li>) }
+					</ul>
+				</header>
 			</Fragment>
         );
     }
