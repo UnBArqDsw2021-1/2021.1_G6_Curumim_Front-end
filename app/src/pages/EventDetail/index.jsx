@@ -11,11 +11,13 @@ export default function EventDetail(props) {
     return (
         <Fragment>
             <div> NavBar </div>
-            <h2>{ props.match.params.value }</h2>
-            <h2>{ state.eventName }</h2>
-            <p>Data { state.date }</p>
-            <button>Editar</button>
-            <p>{ state.description }</p>
+            <header className="App-header-detail">
+                <h2 className="eventName">
+                    { state.eventName }</h2>
+                <p className="data">Data { state.date }</p>
+                <p className="text">{ state.description }</p>
+            </header>
         </Fragment>
     );
 }
+

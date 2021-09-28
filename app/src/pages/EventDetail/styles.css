@@ -24,6 +24,17 @@
     color: white;
 }
 
+.App-header-detail {
+    background-color: #FFFFFF;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #000000;
+}
+
 .App-link {
     color: #61dafb;
 }
@@ -35,4 +46,28 @@
     to {
         transform: rotate(360deg);
     }
+}
+
+.eventName {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.data {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.text {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
 }
