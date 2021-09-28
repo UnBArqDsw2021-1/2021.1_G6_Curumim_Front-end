@@ -10,15 +10,15 @@ class Home extends Component {
     } */
     render() {
         return (
-            <section class='home-page'>
+            <section className='home-page'>
                 <h1>Home</h1>
-                <div class="home-profile">
-                    <div class="profile-components">
-                        <img class="profile-image" src={admPerfil}/>
+                <div className="home-profile">
+                    <div className="profile-components">
+                        <img className="profile-image" src={admPerfil} alt=''/>
                         <span>Nome do Adm</span>
                     </div>
                 </div>
-                <div class="home-body">
+                <div className="home-body">
 
                 </div>
             </section>

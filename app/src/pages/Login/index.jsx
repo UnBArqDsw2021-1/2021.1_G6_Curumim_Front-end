@@ -17,7 +17,7 @@ function login({ user, password }) {
 
 const Login = () => {    
     const [values, setValues] = useState(initialState);
-    const [error, setError] = useState(null);
+    const [setError] = useState(null);
     const { setToken } = useContext(StoreContext);
     const history = useHistory();
 
@@ -56,10 +56,10 @@ const Login = () => {
             <Header />
             <form onSubmit={onSubmit}>
                 <div>
-                    <label className="defaultLabel" for="email">Email</label>
+                    <label className="defaultLabel" htmlFor="email">Email</label>
                     <input className="defaultInput" name="user" id="email" type="email" placeholder="Email" onChange={onChange} value={values.user}/>
 
-                    <label className="defaultLabel" for="password">Senha</label>
+                    <label className="defaultLabel" htmlFor="password">Senha</label>
                     <input className="defaultInput" name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
 
                     <div className="forgotPassword">
