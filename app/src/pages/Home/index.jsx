@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './styles.css';
+import admPerfil from '../../assets/images/home/garota.png'
 
 /* import loadADMProfile from "../../services/admAPIRequests" */
 
@@ -11,8 +12,11 @@ class Home extends Component {
         return (
             <section class='home-page'>
                 <h1>Home</h1>
-                <div class="profile">
-
+                <div class="home-profile">
+                    <div class="profile-components">
+                        <img class="profile-image" src={admPerfil}/>
+                        <span>Nome do Adm</span>
+                    </div>
                 </div>
                 <div class="home-body">
 
