@@ -29,20 +29,20 @@ export default function card(props) {
 		link = "detalhe-agenda/" + props.id;
 
     return (
-        <Card>
+		<Card>
 	        <CardContent>
 	            <Typography variant={"h6"}>
 	                <Link to={ link }>{ props.activityName }</Link>
 	            </Typography>
 	            <Typography variant={"caption"}>
-	                { props.date }
+	                { props.date }<br/>
 	            </Typography>
 	            <Typography variant={"caption"}>
 	                { props.description }<br/>
 
 					<GetIcon type={ props.type } />   
 	            </Typography>
-	            <Button>Detalhes</Button>
+	            <button className="buttonDetail">Detalhes</button>
 	        </CardContent>
 	    </Card>
     );
