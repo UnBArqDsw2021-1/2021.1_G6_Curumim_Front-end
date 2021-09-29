@@ -1,6 +1,6 @@
 import CurumimBackEnd from './config.js'
 
-export default {
+var API = {
     loadADMProfile:() => {
         return CurumimBackEnd.get('/rsp_profile')
     },
@@ -25,3 +25,5 @@ export default {
 
     getScheduleById: {"nome": "Agenda 1", "data": "30/05/2022", "descricao": "Descricao da agenda 1", "id": "1"},
 }
+
+export default API;
