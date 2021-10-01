@@ -66,7 +66,7 @@ const Login = () => {
                     <button class="option-button" type="submit">Entrar</button>
                 </div>
                 <div className="notRegistered">
-                    <span>Não é Cadastrado? <a href="/cadastrar">Cadastre-se</a></span>
+                    <span>Não é Cadastrado? <a href="/cadastro">Cadastre-se</a></span>
                 </div>
             </form>
         </section>
