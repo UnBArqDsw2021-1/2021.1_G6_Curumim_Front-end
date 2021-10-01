@@ -52,29 +52,24 @@ const Login = () => {
     }
 
     return (
-        <div id="divLogin" className="formRegisterLogin">
+        <section className='register-page'>
             <Header />
-            <form onSubmit={onSubmit}>
-                <div>
-                    <label className="defaultLabel" htmlFor="email">Email</label>
-                    <input className="defaultInput" name="user" id="email" type="email" placeholder="Email" onChange={onChange} value={values.user}/>
+            <form onSubmit={onSubmit} className="login-register-form">
+                <h1>Login</h1>
+                <div className="div-inputs">
+                    <label htmlFor="email">Email</label>
+                    <input name="user" id="email" type="email" placeholder="Email" onChange={onChange} value={values.user}/>
 
-                    <label className="defaultLabel" htmlFor="password">Senha</label>
-                    <input className="defaultInput" name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
+                    <label htmlFor="password">Senha</label>
+                    <input name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
 
-                    <div className="forgotPassword">
-                        Esqueceu sua senha?
-                    </div>
-                    <button className="defaultButton" type="submit">
-                        Login
-                    </button>
+                    <button class="option-button" type="submit">Entrar</button>
                 </div>
                 <div className="notRegistered">
-                        Ainda não é cadastrado?&nbsp;
-                        <a href="/cadastrar">Cadastre-se aqui</a>
+                    <span>Não é Cadastrado? <a href="/cadastrar">Cadastre-se</a></span>
                 </div>
             </form>
-        </div>
+        </section>
     )
 }
 
