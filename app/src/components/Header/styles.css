@@ -1,6 +1,12 @@
 .Header {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -2vh;
+    margin: 0 auto;
+    height: 40px;
+    align-items: center;
+    display: flex;
+}
+
+.Header > h2 {
+    margin: auto;
+    color: white;
     font-size: 16px;
 }
