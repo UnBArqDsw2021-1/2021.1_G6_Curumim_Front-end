@@ -63,7 +63,7 @@ const Login = () => {
                     <label htmlFor="password">Senha</label>
                     <input name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
 
-                    <button class="option-button" type="submit">Entrar</button>
+                    <button className="option-button" type="submit">Entrar</button>
                 </div>
                 <div className="notRegistered">
                     <span>Não é Cadastrado? <a href="/cadastro">Cadastre-se</a></span>
