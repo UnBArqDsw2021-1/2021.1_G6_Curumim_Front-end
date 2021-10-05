@@ -42,10 +42,6 @@
     text-align: center;
 }
 
-button {
-    float:right;
-}
-
 /* @media only screen and (min-width:500px) {
     .title {
         color: var(--main-color);
@@ -76,7 +72,12 @@ h1 {
     margin-right: auto;
 }
 
-form {
+.form-register {
     display: grid;
     grid-template-rows: 3fr 3fr;
+}
+
+.form-register > button {
+    float:right;
+    font-weight: bold;
 }

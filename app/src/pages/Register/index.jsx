@@ -8,7 +8,7 @@ class Register extends Component {
     render() {
         return (
             <section class='register-page'>
-                <form>
+                <form className="form-register">
                     <h1 class="title">Register</h1>
                     
                     <div class="div-inputs">
