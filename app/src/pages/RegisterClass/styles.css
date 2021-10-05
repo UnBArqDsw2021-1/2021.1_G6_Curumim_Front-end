@@ -1,0 +1,72 @@
+.div-register-class-selects{
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--main-color);
+  min-height: 0;
+  min-width: 0;
+  height: 8vh;
+}
+
+.div-select-period{
+  justify-self: start;
+  min-width: 0;
+  min-height: 0;
+}
+
+.div-select-class{
+  justify-self: end;
+  min-width: 0;
+  min-height: 0;
+}
+
+.select-class, .select-period {
+  min-width: 0;
+  min-height: 0;
+  width: 12vh;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #C2C2C5;
+  -webkit-appearance: none;
+  background: url(../../assets/images/down-arrow.png) no-repeat right;
+}
+
+.add-teacher {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  border-bottom: 1px solid var(--main-color);
+  min-height: 0;
+  min-width: 0;
+}
+
+.search-teacher {
+  display: inline-grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 0;
+  min-width: 0;
+}
+
+.search-teacher > input {
+  border-bottom: 1px solid #C2C2C5;
+}
+
+.add-student {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 3vh;
+  padding-bottom: 2vh;
+  min-height: 0;
+  min-width: 0;
+}
+
+.search-student {
+  display: inline-grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 0;
+  min-width: 0;
+}
+
+.search-student > input {
+  border-bottom: 1px solid #C2C2C5;
+}

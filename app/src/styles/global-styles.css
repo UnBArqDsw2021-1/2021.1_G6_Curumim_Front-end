@@ -64,8 +64,7 @@ span {
 }
 
 button {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 2.7vh;
 }
 
 .home-page {
@@ -141,23 +140,70 @@ code {
     border-radius: 10vh;
 }
 
-#adm-register {
+.adm-register {
+    overflow: hidden;
+    min-height: 0;
+    min-width: 0;
+}
+
+.div-adm-register {
+    display: grid;
+    grid-template-rows: 1fr 6fr 2fr;
+    margin-top: 65px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 0;
+    min-width: 0;
+}
+
+.adm-register-title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    margin-bottom: 5vh;
+    min-width: 0;
+    min-height: 0;
     overflow: hidden;
 }
 
-#adm-form-register {
-    display: grid;
-    grid-template-rows: 1fr 15fr;
-    margin-top: 100px;
-    height: 100%;
-    margin-left: 20px;
-    margin-top: 70px;
+.adm-register-form {
+    min-height: 0;
+    min-width: 0;
 }
 
-#adm-strong-register {
-    font-size: 24px;
+.adm-register-buttons {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.adm-register-buttons {
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.adm-register-buttons > button {
+    height: 6vh;
+    width: 22.5vh;
+    border-radius: 3vh;
+    
+    font-size: 2.7vh;
+    align-items: center;
     font-style: normal;
-    font-weight: 700;
-    line-height: 40px;
-    letter-spacing: 0px;
+    line-height: 3.1vh;
+}
+
+.adm-cancel-register {
+    border: 1px solid var(--main-color);
+    background-color: #FFFFFF;
+}
+
+.adm-register-button {
+    color: #FFFFFF;
+    float: right;
+    background-color: var(--main-color);
 }
