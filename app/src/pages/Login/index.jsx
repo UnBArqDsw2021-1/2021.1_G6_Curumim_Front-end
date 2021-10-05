@@ -18,7 +18,7 @@ class Login extends Component {
                         <div className="forgotPassword">
                             Esqueceu sua senha?
                         </div>
-                        <button className="defaultButton" type="submit">
+                        <button id="login-button" className="defaultButton" type="submit">
                             Login
                         </button>
                     </div>
