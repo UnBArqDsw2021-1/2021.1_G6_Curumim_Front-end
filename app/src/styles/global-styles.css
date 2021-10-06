@@ -180,12 +180,6 @@ code {
     overflow: hidden;
 }
 
-.adm-register-buttons {
-    min-width: 0;
-    min-height: 0;
-    overflow: hidden;
-}
-
 .adm-register-buttons > button {
     height: 6vh;
     width: 22.5vh;

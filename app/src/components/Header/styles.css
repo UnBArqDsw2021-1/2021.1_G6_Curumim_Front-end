@@ -9,4 +9,6 @@
     text-align: center;
     width: 100%;
     position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
 }
