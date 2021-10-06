@@ -8,6 +8,9 @@ import ClassList from '../pages/ClassList';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
 import RegisterClass from '../pages/RegisterClass';
+import RegisterStudent from '../pages/RegisterStudent';
+import RegisterTeacher from '../pages/RegisterTeacher';
+import RegisterEvent from '../pages/RegisterEvent';
 
 class Routes extends Component {
   render() {
@@ -21,6 +24,9 @@ class Routes extends Component {
         <Route exact path="/detalhe-evento" component={EventDetail} />
         <Route exact path="/menu-responsavel" component={ResponsibleMenu} />
         <Route exact path="/cadastrar-turma" component={RegisterClass} />
+        <Route exact path="/cadastrar-aluno" component={RegisterStudent} />
+        <Route exact path="/cadastrar-professor" component={RegisterTeacher} />
+        <Route exact path="/cadastrar-evento" component={RegisterEvent} />
       </Switch>
     </BrowserRouter>
     );
