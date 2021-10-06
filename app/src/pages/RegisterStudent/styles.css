@@ -1,0 +1,13 @@
+.input-register-student{
+  border-bottom: 1px solid #C2C2C5;
+  margin-bottom: 4vh;
+}
+
+.input-register-student > input {
+  width: 100%;
+  height: 100%;
+}
+
+.input-register-student > input::placeholder {
+  font-size: 15px;
+}
