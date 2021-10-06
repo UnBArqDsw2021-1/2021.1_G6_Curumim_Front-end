@@ -17,19 +17,19 @@ function RegisterStudent() {
           </div>
           <div className="input-register-student">
             <h4>CPF do responsável:</h4>
-            <input type="text" placeholder="CPF do responsável"/>
+            <input type="number" placeholder="CPF do responsável"/>
           </div>
           <div className="input-register-student">
             <h4>E-mail dos responsável:</h4>
-            <input type="text" placeholder="E-mail do responsável" />
+            <input type="email" placeholder="E-mail do responsável" />
           </div>
           <div className="input-register-student">
             <h4>Endereço:</h4>
-            <input type="text" placeholder="Endereço"/>
+            <input type="text" placeholder="Endereço da criança"/>
           </div>
           <div className="input-register-student">
             <h4>CEP:</h4>
-            <input type="text" placeholder="CEP"/>
+            <input type="number" placeholder="CEP da criança"/>
           </div>
         </form>
         <div className="adm-register-buttons">

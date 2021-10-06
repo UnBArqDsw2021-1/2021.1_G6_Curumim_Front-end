@@ -1,4 +1,13 @@
 .input-register-event{
   border-bottom: 1px solid #C2C2C5;
-  margin-bottom: 4vh;
+  margin-bottom: 3vh;
+}
+
+.input-register-event > input {
+  width: 100%;
+  height: 100%;
+}
+
+.input-register-event > input::placeholder {
+  font-size: 15px;
 }
