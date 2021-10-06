@@ -1,0 +1,13 @@
+.input-register-teacher{
+  border-bottom: 1px solid #C2C2C5;
+  margin-bottom: 3vh;
+}
+
+.input-register-teacher > input {
+  width: 100%;
+  height: 100%;
+}
+
+.input-register-teacher > input::placeholder {
+  font-size: 15px;
+}
