@@ -189,6 +189,7 @@ code {
     align-items: center;
     font-style: normal;
     line-height: 3.1vh;
+    cursor: pointer;
 }
 
 .adm-cancel-register {
