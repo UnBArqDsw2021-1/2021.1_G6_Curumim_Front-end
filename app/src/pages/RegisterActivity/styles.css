@@ -1,0 +1,33 @@
+.input-register-activity{
+  border-bottom: 1px solid #C2C2C5;
+  margin-bottom: 3vh;
+}
+
+.input-register-activity > h4{
+  margin-bottom: 1vh;
+}
+
+.input-register-activity > input {
+  width: 100%;
+  height: 100%;
+}
+
+.input-register-activity > input::placeholder {
+  font-size: 15px;
+}
+
+.input-register-activity > textarea {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 1px solid #C2C2C5;
+  outline: none;
+}
+
+#input-teacher-date-class {
+  display: flex;
+  height: 3vh;
+}
+
+#input-teacher-date-class > div {
+  width: 2vh;
+}
