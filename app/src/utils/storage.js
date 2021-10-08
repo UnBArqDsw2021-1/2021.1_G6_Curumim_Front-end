@@ -26,4 +26,9 @@ try {
   storage.remove = Cookie.remove;
 }
 
+export function logout() {
+  localStorage.clear();
+  window.location.href = '/login';
+}
+
 export default storage;
