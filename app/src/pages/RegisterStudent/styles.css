@@ -3,6 +3,10 @@
   margin-bottom: 3vh;
 }
 
+.input-register-student > h4{
+  margin-bottom: 1vh;
+}
+
 .input-register-student > input {
   width: 100%;
   height: 100%;

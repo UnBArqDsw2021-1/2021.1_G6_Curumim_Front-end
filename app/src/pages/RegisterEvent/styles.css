@@ -3,6 +3,10 @@
   margin-bottom: 3vh;
 }
 
+.input-register-event > h4{
+  margin-bottom: 1vh;
+}
+
 .input-register-event > input {
   width: 100%;
   height: 100%;
