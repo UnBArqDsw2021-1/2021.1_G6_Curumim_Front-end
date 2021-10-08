@@ -1,30 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 
 import './styles.css';
 
-/* const useStyles = makeStyles((theme) => ({
-    formControl: {
-        margin: theme.spacing(''),
-        minWidth: 200
-    }
-})) */
-
 function RegisterClass() {
-    //const classes = useStyles()
+    const [period, setPeriod] = useState('');
+    const [grade, setGrade] = useState('');
+    const [teacher, setTeacher] = useState('');
+    const [students, setStudents] = useState([]);
 
-    /* const [Class, setClass] = React.useState('')
-
-    const handleChangeClass = (event) => {
-        setClass(event.target.value)
+    const createdClass = {
+        Period:period,
+        Class: grade,
+        Teacher: teacher,
+        Students: students
     }
 
-    const [Period, setPeriod] = React.useState('')
-
-    const handleChangePeriod = (event) => {
-        setClass(event.target.value)
-    } */
+    const handleAddStudents = (e) => {
+        setStudents(students.concat(e.currentTarget.value));
+        document.getElementById('students-input').value = '';
+    }
 
     return (
         <section className="adm-register">
@@ -37,8 +33,9 @@ function RegisterClass() {
                             <label for="select-period">Período</label>
                             <select
                             className="select-period"
-                            value=''
-                            /* onChange={handleChangePeriod} */>
+                            value={period}
+                            onChange={e => setPeriod(e.currentTarget.value)}
+                            >
                                 <option value="" disabled></option>
                                 <option value="Diurno">Diurno</option>
                                 <option value="Noturno">Noturno</option>
@@ -48,7 +45,8 @@ function RegisterClass() {
                             <label for="select-class">Turma</label>
                             <select
                             className="select-class"
-                            value=''
+                            value={grade}
+                            onChange={e => setGrade(e.currentTarget.value)}
                             /* onChange={handleChangeClass} */>
                                 <option value="" disabled></option>
                                 <option value="1º Ano">1º Ano</option>
@@ -60,7 +58,13 @@ function RegisterClass() {
                         <strong>Inscrever Professor</strong><br/>
                         <div className="search-teacher">
                             <label>Pesquisar:</label>
-                            <input type="text" list="teachers" placeholder="Nome do professor"/>
+                            <input 
+                                type="text" 
+                                list="teachers" 
+                                placeholder="Nome do professor" 
+                                value={teacher}
+                                onChange={e => setTeacher(e.currentTarget.value)}
+                            />
                             <datalist id="teachers">
                                 <option value="Rodinei"/>
                                 <option value="Rodrigo"/>
@@ -72,17 +76,28 @@ function RegisterClass() {
                         <strong>Inscrever Aluno</strong><br/>
                         <div className="search-student">
                             <label>Pesquisar:</label>
-                            <input type="text" list="students" placeholder="Nome do aluno"/>
+                            <input 
+                                id="students-input"
+                                type="text" 
+                                list="students" 
+                                placeholder="Nome do aluno"
+                                onChange={e => handleAddStudents(e)}
+                            />
                             <datalist id="students">
                                 <option value="Rodinei"/>
+                                <option value="Cesinha"/>
+                                <option value="Robertinha"/>
                             </datalist>
                         </div>
                         <div className="added-student"></div>
                     </div>
+                    <div className="students-added">
+                        
+                    </div>
                 </form>
                 <div className="adm-register-buttons">
                     <button className="adm-cancel-register">Cancelar</button>
-                    <button className="adm-register-button">Cadastrar</button>
+                    <button className="adm-register-button" onClick={() => console.log(createdClass)}>Cadastrar</button>
                 </div>
             </div>
         </section>
