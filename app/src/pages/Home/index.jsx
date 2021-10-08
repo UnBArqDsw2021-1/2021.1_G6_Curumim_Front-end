@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './styles.css';
 import admPerfil from '../../assets/images/home/garota.png'
 
+import Header from '../../components/Header';
+
 /* import loadADMProfile from "../../services/admAPIRequests" */
 
 class Home extends Component {
@@ -11,6 +13,7 @@ class Home extends Component {
     render() {
         return (
             <section className='home-page'>
+                <Header />
                 <h1>Home</h1>
                 <div className="home-profile">
                     <div className="profile-components">
