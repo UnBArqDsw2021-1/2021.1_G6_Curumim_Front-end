@@ -5,21 +5,99 @@ import Header from '../../components/Header';
 import './styles.css';
 
 function RegisterClass() {
+    const allStudents = [
+        {
+            name: 'Rodinei',
+            id: 0
+        },
+        {
+            name: 'Cesinha',
+            id: 1,
+        },
+        {
+            name: 'Róger',
+            id: 2,
+        },
+        {
+            name: 'Robertinha Matos Barroso Silva',
+            id: 3,
+        },
+        {
+            name: 'Daniela',
+            id: 4,
+        },
+        {
+            name: 'Roriz',
+            id: 5,
+        },
+        {
+            name: 'Danilo',
+            id: 6,
+        },
+        {
+            name: 'Rafael',
+            id: 7,
+        },
+        {
+            name: 'Jonas',
+            id: 51,
+        },
+      ];
+
+    const allTeachers = [
+        {
+          name: 'Josefa',
+          id: 0
+        },
+        {
+          name: 'Francisco',
+          id: 1,
+        },
+        {
+          name: 'José',
+          id: 2,
+        },
+        {
+          name: 'Débora',
+          id: 3,
+        },
+        {
+          name: 'Fátima',
+          id: 4,
+        }
+    ];
+
     const [period, setPeriod] = useState('');
     const [grade, setGrade] = useState('');
     const [teacher, setTeacher] = useState('');
-    const [students, setStudents] = useState([]);
+    const [addedStudents, setAddedStudents] = useState([]);
 
     const createdClass = {
         Period:period,
         Class: grade,
         Teacher: teacher,
-        Students: students
+        Students: addedStudents
     }
 
     const handleAddStudents = (e) => {
-        setStudents(students.concat(e.currentTarget.value));
+        if(addedStudents.filter(k => k.name === e.currentTarget.value).length <= 0){
+            const updatedStudents = [
+                ...addedStudents,
+                ...allStudents.filter((x) => x.name == e.currentTarget.value)
+            ]
+            setAddedStudents(updatedStudents);
+        }
         document.getElementById('students-input').value = '';
+    }
+
+    const handleRemoveStudents = (e) => {
+        const id = (e.currentTarget.id).split("-", 3)[2];
+
+        const updateStudents = [
+            ...addedStudents.filter((x) => x.id != id),
+        ]
+
+        setAddedStudents(updateStudents);
     }
 
     return (
@@ -30,7 +108,7 @@ function RegisterClass() {
                 <form className="adm-register-form">
                     <div className="div-register-class-selects">
                         <div className="div-select-period">
-                            <label for="select-period">Período</label>
+                            <label htmlFor="select-period">Período</label>
                             <select
                             className="select-period"
                             value={period}
@@ -42,12 +120,12 @@ function RegisterClass() {
                             </select>
                         </div>
                         <div className="div-select-class">
-                            <label for="select-class">Turma</label>
+                            <label htmlFor="select-class">Turma</label>
                             <select
                             className="select-class"
                             value={grade}
                             onChange={e => setGrade(e.currentTarget.value)}
-                            /* onChange={handleChangeClass} */>
+                            >
                                 <option value="" disabled></option>
                                 <option value="1º Ano">1º Ano</option>
                                 <option value="2º Ano">2º Ano</option>
@@ -66,8 +144,9 @@ function RegisterClass() {
                                 onChange={e => setTeacher(e.currentTarget.value)}
                             />
                             <datalist id="teachers">
-                                <option value="Rodinei"/>
-                                <option value="Rodrigo"/>
+                                {allTeachers.map(teacher => (
+                                    <option key={teacher.id} value={teacher.name}></option>
+                                ))}
                             </datalist>
                         </div>
                         <div className="added-teacher"></div>
@@ -84,15 +163,24 @@ function RegisterClass() {
                                 onChange={e => handleAddStudents(e)}
                             />
                             <datalist id="students">
-                                <option value="Rodinei"/>
-                                <option value="Cesinha"/>
-                                <option value="Robertinha"/>
+                                {allStudents.map(student => (
+                                    <option id={`student-${student.id}`} value={student.name}></option>
+                                ))}
                             </datalist>
                         </div>
-                        <div className="added-student"></div>
                     </div>
                     <div className="students-added">
-                        
+                        {addedStudents.length > 0 ? addedStudents.map(student => (
+                            <div className="student-added">
+                                <h5 id={`added-student-${student.name}`}>{student.name}</h5>
+                                <img 
+                                    id={`thrash-student-${student.id}`} 
+                                    src="../../assets/images/thrash.png" 
+                                    alt="lixo" 
+                                    onClick={e => handleRemoveStudents(e)}
+                                />  
+                            </div>        
+                        )) : null}
                     </div>
                 </form>
                 <div className="adm-register-buttons">

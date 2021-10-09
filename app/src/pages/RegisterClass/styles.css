@@ -71,3 +71,28 @@
 .search-student > input {
   border-bottom: 1px solid #C2C2C5;
 }
+
+.add-student > h5 {
+  margin-top: 2vh;
+}
+
+.students-added {
+  overflow: scroll;
+  max-height: 25%;
+}
+
+.student-added {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5vh;
+}
+
+.student-added > h5 {
+  width: 50%;
+  overflow-x: scroll;
+}
+
+.student-added > img {
+  width: 50%;
+  justify-content: center;
+}
