@@ -7,13 +7,13 @@ import './styles.css';
 function RegisterEvent() {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
-  const [data, setData] = useState('');
+  const [date, setDate] = useState('');
   const [local, setLocal] = useState('');
 
   const addedEvent = {
     name: name,
     description: description,
-    data: data,
+    date: date,
     local: local
   }
 
@@ -29,11 +29,11 @@ function RegisterEvent() {
           </div>
           <div className="input-register-event">
               <h4>Descrição:</h4>
-              <input type="text" placeholder="Nome do evento" onChange={(e) => setDescription(e.currentTarget.value)}/>
+              <textarea cols="35" rows="3" placeholder="Descrição da atividade" onChange={(e) => setDescription(e.currentTarget.value)}/>
           </div>
           <div className="input-register-event">
               <h4>Data:</h4>
-              <input type="date" placeholder="Data do evento" onChange={(e) => setData(e.currentTarget.value)}/>
+              <input type="date" placeholder="Data do evento" onChange={(e) => setDate(e.currentTarget.value)}/>
           </div>
           <div className="input-register-event">
               <h4>Local:</h4>

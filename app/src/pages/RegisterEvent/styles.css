@@ -15,3 +15,10 @@
 .input-register-event > input::placeholder {
   font-size: 15px;
 }
+
+.input-register-event > textarea {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 1px solid #C2C2C5;
+  outline: none;
+}
