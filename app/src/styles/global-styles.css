@@ -123,3 +123,37 @@ code {
     align-items: center;
     align-items: center;
 }
+
+.login-register-error {
+    color: #FFDAB9;
+    font-size: 15px;
+    height: 20px;
+    font-weight: bold;
+}
+
+/* spinner loading*/
+.lds-dual-ring {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid var(--main-color);
+    border-color: var(--main-color) transparent var(--main-color) transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

@@ -19,13 +19,14 @@ async function requestLogin({ email, password }) {
             return { response: res.data }
         }
     } catch {
-        return { response: null, error: 'Login ou Senha inválido' }
+        return { response: null, error: 'Email ou Senha inválido' }
     }
 }
 
 const Login = () => {   
     const [values, setValues] = useState(initialState)
     const [error, setError] = useState(null)
+    const [loading, setLoading] = useState(null)
     const { setToken, setUser } = useContext(StoreContext)
     const history = useHistory()
 
@@ -45,18 +46,36 @@ const Login = () => {
     async function onSubmit(event) {
         event.preventDefault()
     
+        setLoading(true)
+
         const { response, error } = await requestLogin(values)
         if (response) {
             if (response.token) {
                 setToken(response.token)
                 setUser(response.user)
+                setLoading(false)
       
                 return history.push('/')
             }
         }
     
+        setLoading(false)
         setError(error)
         setValues(initialState)
+    }
+
+    let errorLoginMessage
+    let loginLoading
+
+    if (error) {
+        errorLoginMessage = error
+        setTimeout(() => {
+            setError(null)
+        }, 4000)
+    }
+
+    if (loading) {
+        loginLoading = <div className="lds-dual-ring"></div>
     }
 
     return (
@@ -71,7 +90,9 @@ const Login = () => {
                     <label htmlFor="password">Senha</label>
                     <input name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
 
-                    <button className="option-button" type="submit">Entrar</button>
+                    <span className='login-register-error'>{ errorLoginMessage }</span>
+                    
+                    <button className="option-button" type="submit"> {loginLoading} Entrar</button>
                 </div>
                 <div className="notRegistered">
                     <span>Não é Cadastrado? <a href="/cadastro">Cadastre-se</a></span>
