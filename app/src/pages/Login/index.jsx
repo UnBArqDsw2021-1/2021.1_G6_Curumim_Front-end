@@ -9,10 +9,10 @@ class Login extends Component {
                 <Header />
                 <form>
                     <div>
-                        <label className="defaultLabel" for="email">Email</label>
+                        <label className="defaultLabel" htmlFor="email">Email</label>
                         <input className="defaultInput" id="email" type="email" placeholder="Email"/>
 
-                        <label className="defaultLabel" for="password">Senha</label>
+                        <label className="defaultLabel" htmlFor="password">Senha</label>
                         <input className="defaultInput" id="password" type="password" placeholder="Senha"/>
 
                         <div className="forgotPassword">
