@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import StoreContext from '../../store/Context';
 import './styles.css';
 
@@ -7,8 +7,8 @@ import Header from '../../components/Header';
 
 import auth from '../../services/authentication'
 
-function initialState() {
-    return { email: '', password: '' }
+function initialState(email) {
+    return { email: email, password: '' }
 }
 
 async function requestLogin({ email, password }) {
@@ -24,11 +24,18 @@ async function requestLogin({ email, password }) {
 }
 
 const Login = () => {   
-    const [values, setValues] = useState(initialState)
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(null)
     const { setToken, setUser } = useContext(StoreContext)
     const history = useHistory()
+    const location = useLocation()
+
+    let emailLocation = ''
+    if (location.state && !emailLocation) {
+        emailLocation = location.state.email
+    }
+
+    const [values, setValues] = useState(initialState(emailLocation))
 
     if (useContext(StoreContext).token) {
         history.push('/')
@@ -61,7 +68,7 @@ const Login = () => {
     
         setLoading(false)
         setError(error)
-        setValues(initialState)
+        setValues(initialState(emailLocation))
     }
 
     let errorLoginMessage
@@ -85,10 +92,10 @@ const Login = () => {
                 <h1>Login</h1>
                 <div className="div-inputs">
                     <label htmlFor="email">Email</label>
-                    <input name="email" id="email" type="email" placeholder="Email" onChange={onChange} value={values.email}/>
+                    <input name="email" id="email" type="email" placeholder="Email" onChange={onChange} value={values.email} required={true}/>
 
                     <label htmlFor="password">Senha</label>
-                    <input name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password}/>
+                    <input name="password" id="password" type="password" placeholder="Senha" onChange={onChange} value={values.password} required={true}/>
 
                     <span className='login-register-error'>{ errorLoginMessage }</span>
                     

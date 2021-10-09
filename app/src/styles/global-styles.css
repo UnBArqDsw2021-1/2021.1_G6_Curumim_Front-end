@@ -129,6 +129,7 @@ code {
     font-size: 15px;
     height: 20px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 /* spinner loading*/
