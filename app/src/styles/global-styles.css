@@ -71,34 +71,6 @@ button {
     font-weight: bold;
 }
 
-.home-page {
-    width: 100%;
-    height: 100%;
-}
-
-.home-profile {
-    padding: 20px;
-    height: 200px;
-    background-color: var(--main-color);
-    border-radius: 0 0 var(--main-radius) var(--main-radius);
-}
-
-.profile-components {
-    width: min-content;
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-image {
-    height: 60px;
-}
-
-.home-body {
-    height: 100%;
-    padding: 0 20px;
-}
-
 .page-body {
     margin: 0 30px;
     background-color: red;
