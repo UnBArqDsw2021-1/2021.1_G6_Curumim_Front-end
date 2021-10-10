@@ -59,7 +59,7 @@ const Login = () => {
         if (response) {
             if (response.token) {
                 setToken(response.token)
-                setUser(response.user)
+                localStorage.setItem('user', JSON.stringify(response.user))
                 setLoading(false)
       
                 return history.push('/')
