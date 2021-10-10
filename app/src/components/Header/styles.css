@@ -3,6 +3,7 @@
     height: 40px;
     align-items: center;
     display: flex;
+    background-color: var(--main-color);
 }
 
 .Header > h2 {
