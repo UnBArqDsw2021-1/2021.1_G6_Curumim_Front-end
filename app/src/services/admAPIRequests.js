@@ -1,7 +1,12 @@
 import CurumimBackEnd from './config.js'
 
 export default{
-    loadADMProfile:() => {
-        return CurumimBackEnd.get('/adm_profile')
+    listGuardians:(token) => {
+        return CurumimBackEnd.get('/adm/list-guardians', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token
+            }
+        })
     }
 }

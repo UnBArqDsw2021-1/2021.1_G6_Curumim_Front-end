@@ -12,3 +12,9 @@
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
 }
+
+.Header > h2 {
+    margin: auto;
+    color: white;
+    font-size: 16px;
+}
