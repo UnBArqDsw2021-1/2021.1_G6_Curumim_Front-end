@@ -88,7 +88,7 @@
 }
 
 .student-added > h5 {
-  width: 50%;
+  width: 70%;
   overflow-x: scroll;
 }
 
@@ -96,4 +96,5 @@
   width: 2vh;
   justify-content: center;
   height: 2vh;
+  margin-left: 5vh;
 }

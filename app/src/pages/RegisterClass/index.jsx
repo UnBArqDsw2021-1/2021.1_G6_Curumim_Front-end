@@ -171,9 +171,11 @@ function RegisterClass() {
                                 ))}
                             </datalist>
                         </div>
+                        <h5>Lista de alunos:</h5>
                     </div>
                     <div className="students-added">
                         {addedStudents.length > 0 ? addedStudents.map(student => (
+                            <>
                             <div className="student-added">
                                 <h5 id={`added-student-${student.name}`}>{student.name}</h5>
                                 <img 
@@ -181,8 +183,10 @@ function RegisterClass() {
                                     src={Thrash} 
                                     alt="lixo" 
                                     onClick={e => handleRemoveStudents(e)}
-                                />  
-                            </div>        
+                                /> 
+                            </div>
+                            <hr/>    
+                            </>
                         )) : null}
                     </div>
                 </form>
