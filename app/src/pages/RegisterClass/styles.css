@@ -93,6 +93,7 @@
 }
 
 .student-added > img {
-  width: 50%;
+  width: 2vh;
   justify-content: center;
+  height: 2vh;
 }

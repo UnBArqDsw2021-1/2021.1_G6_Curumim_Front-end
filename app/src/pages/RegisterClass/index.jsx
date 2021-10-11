@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Header from '../../components/Header';
+import Thrash from '../../assets/images/thrash.png';
 
 import './styles.css';
 
@@ -83,6 +84,7 @@ function RegisterClass() {
         if(addedStudents.filter(k => k.name === e.currentTarget.value).length <= 0){
             const updatedStudents = [
                 ...addedStudents,
+                // eslint-disable-next-line
                 ...allStudents.filter((x) => x.name == e.currentTarget.value)
             ]
             setAddedStudents(updatedStudents);
@@ -94,6 +96,7 @@ function RegisterClass() {
         const id = (e.currentTarget.id).split("-", 3)[2];
 
         const updateStudents = [
+            // eslint-disable-next-line
             ...addedStudents.filter((x) => x.id != id),
         ]
 
@@ -175,7 +178,7 @@ function RegisterClass() {
                                 <h5 id={`added-student-${student.name}`}>{student.name}</h5>
                                 <img 
                                     id={`thrash-student-${student.id}`} 
-                                    src="../../assets/images/thrash.png" 
+                                    src={Thrash} 
                                     alt="lixo" 
                                     onClick={e => handleRemoveStudents(e)}
                                 />  
