@@ -26,7 +26,6 @@ async function requestLogin({ email, password }) {
 const Login = () => {   
     const [error, setError] = useState(null)
     const [loading, setLoading] = useState(null)
-    const { setToken, setUser } = useContext(StoreContext)
     const history = useHistory()
     const location = useLocation()
 
@@ -55,20 +54,21 @@ const Login = () => {
     
         setLoading(true)
 
-        const { response, error } = await requestLogin(values)
-        if (response) {
-            if (response.token) {
-                setToken(response.token)
-                localStorage.setItem('user', JSON.stringify(response.user))
+        requestLogin(values).then(res =>{
+            if (res.response) {
+                if (res.response.token) {
+                    localStorage.setItem('token', res.response.token)
+                    localStorage.setItem('user', JSON.stringify(res.response.user)) 
+                    setLoading(false)
+
+                    history.push('/')
+                }
+            } else {
                 setLoading(false)
-      
-                return history.push('/')
+                setError(error)
+                setValues(initialState(emailLocation))
             }
-        }
-    
-        setLoading(false)
-        setError(error)
-        setValues(initialState(emailLocation))
+        })
     }
 
     let errorLoginMessage

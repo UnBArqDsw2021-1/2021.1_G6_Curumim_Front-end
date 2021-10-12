@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './styles.css';
 import admPerfil from '../../assets/images/home/garota.png'
 
@@ -9,7 +9,6 @@ import HomeTeacherContent from '../../components/HomeTeacherContent'
 
 const Home = () => {
     var userLogged = JSON.parse(localStorage.getItem('user'))
-    const [user] = useState(userLogged)
     
     let loginLoading
     if(userLogged) {
