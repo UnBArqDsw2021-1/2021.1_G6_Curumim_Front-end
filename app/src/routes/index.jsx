@@ -10,6 +10,7 @@ import Register from '../pages/Register';
 import ClassList from '../pages/ClassList';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
+import ActivityDetail from '../pages/ActivityDetail';
 
 class Routes extends Component {
   render() {
@@ -23,6 +24,7 @@ class Routes extends Component {
             <RoutesPrivate exact path="/lista-turmas" component={ClassList} />
             <RoutesPrivate exact path="/detalhe-evento" component={EventDetail} />
             <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
+            <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
           </Switch>
         </StoreProvider>
       </BrowserRouter>
