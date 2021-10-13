@@ -98,7 +98,7 @@ const Register = () => {
 
                     <span className='login-register-error'>{ errorRegisterMessage }</span>
 
-                    <button className="option-button" type="submit"> {registerLoading} Cadastrar</button>
+                    <button className="button option-button" type="submit"> {registerLoading} Cadastrar</button>
                 </div>
 
                 <div className="notRegistered">

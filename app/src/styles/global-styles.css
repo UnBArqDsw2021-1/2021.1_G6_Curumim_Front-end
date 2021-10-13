@@ -10,6 +10,7 @@
     height: 100%;
 
     --main-color:#6D65D3;
+    --cinza-color:#C2C2C5;
     --main-radius: 20px
 }
 
@@ -43,19 +44,27 @@ section {
     width: 100%;
 }
 
-.main-button {
-    background-color: black;
-}
-
-.option-button {
+.button {
     display: flex;
     align-items: center;
     cursor: pointer;
     height: 35px;
     padding: 5px 15px;
-    background-color: white;
     border-radius: var(--main-radius);
+}
+
+.main-button {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.option-button {
+    background-color: white;
     color: var(--main-color);
+}
+
+.option-button-margin {
+    border: 1px solid var(--main-color);
 }
 
 h1 {

@@ -28,3 +28,35 @@
     padding: 0 20px;
     margin-top: 20px;
 }
+
+.teste-aqui {
+    cursor: pointer;
+    background-color: red;
+}
+
+.home-content > h3 {
+    margin-bottom: 20px;
+}
+
+.home-content > hr {
+    opacity: 0.5;
+    margin: 20px 0;
+}
+
+.home-content > div {
+    height: min-content;
+}
+
+.home-content > div > span {
+    font-size: 16px;
+}
+
+.home-content-buttons {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    transition: 2s;
+}
+
+.home-content-first-button {
+    margin-right: 20px;
+}

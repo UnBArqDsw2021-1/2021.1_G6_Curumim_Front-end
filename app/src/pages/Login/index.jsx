@@ -99,7 +99,7 @@ const Login = () => {
 
                     <span className='login-register-error'>{ errorLoginMessage }</span>
                     
-                    <button className="option-button" type="submit"> {loginLoading} Entrar</button>
+                    <button className="button option-button" type="submit"> {loginLoading} Entrar</button>
                 </div>
                 <div className="notRegistered">
                     <span>Não é Cadastrado? <a href="/cadastro">Cadastre-se</a></span>
