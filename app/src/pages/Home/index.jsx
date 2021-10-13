@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 import admPerfil from '../../assets/images/home/garota.png'
 
@@ -9,6 +9,7 @@ import HomeTeacherContent from '../../components/HomeTeacherContent'
 
 const Home = () => {
     var userLogged = JSON.parse(localStorage.getItem('user'))
+    const [user, setUser] = useState(userLogged)
     
     let loginLoading
     if(userLogged) {
@@ -27,7 +28,7 @@ const Home = () => {
             <div className="home-profile">
                 <div className="profile-components">
                     <img className="profile-image" src={admPerfil} alt=''/>
-                    {/* <h3>{user.name}</h3> */}
+                    <h3>{user.name}</h3>
                 </div>
             </div>
             <div className="home-body">
