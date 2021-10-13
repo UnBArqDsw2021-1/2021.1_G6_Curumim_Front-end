@@ -57,11 +57,12 @@
 }
 
 .classList {
+    width: 366px;
     margin-left: 15vw;
     margin-right: auto;
     margin-top: 2vh;
     line-height: 2em;
     color: #000000;
-    word-spacing: 230px;
+    word-spacing: 200px;
     box-shadow: red;
 }
