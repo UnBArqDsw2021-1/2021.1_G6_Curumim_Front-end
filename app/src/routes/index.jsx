@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import StoreProvider from '../store/Provider';
+import RoutesPrivate from './Private';
+
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
@@ -13,16 +16,18 @@ class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/cadastro" component={Register} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/lista-turmas" component={ClassList} />
-        <Route exact path="/detalhe-evento" component={EventDetail} />
-        <Route exact path="/menu-responsavel" component={ResponsibleMenu} />
-        <Route exact path="/detalhe-atividade/:value" component={ActivityDetail} />
-      </Switch>
-    </BrowserRouter>
+        <StoreProvider>
+          <Switch>
+            <RoutesPrivate exact path="/" component={Home} />
+            <Route exact path="/cadastro" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <RoutesPrivate exact path="/lista-turmas" component={ClassList} />
+            <RoutesPrivate exact path="/detalhe-evento" component={EventDetail} />
+            <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
+            <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
+          </Switch>
+        </StoreProvider>
+      </BrowserRouter>
     );
   }
 }

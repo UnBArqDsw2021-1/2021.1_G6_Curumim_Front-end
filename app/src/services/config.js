@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const CurumimBackEnd = axios.create({
-    baseURL: process.env.BACK_URL,
+    baseURL: 'https://curumim-back-end-stage.herokuapp.com',
 });
 
 export default CurumimBackEnd; 
