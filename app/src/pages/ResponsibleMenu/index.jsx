@@ -63,7 +63,7 @@ export default function ResponsibleMenu() {
   return (
     <Fragment>
       <div> NavBar </div>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', display: 'block', width: 270, marginLeft: 'auto', marginRight: 'auto',left: 22, top: 51 }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
           <Tab icon={<img alt="" src={ Brick } />} {...a11yProps(0)}></Tab>
           <Tab icon={<img alt="" src={ RedFlag } />} {...a11yProps(1)} />

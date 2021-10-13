@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -18,7 +18,7 @@ function GetIcon(props){
 		return <img alt="" src={ Calendar }/>;
 }
 
-export default function card(props) {
+export default function Cards(props) {
 	let link;
 	if(props.type === "activity")
 		link = "detalhe-atividade/" + props.id;
@@ -27,11 +27,13 @@ export default function card(props) {
 	else
 		link = "detalhe-agenda/" + props.id;
 
+	let history = useHistory();
+
     return (
 		<Card>
 	        <CardContent>
 	            <Typography variant={"h6"}>
-	                <Link to={ link }>{ props.activityName }</Link>
+				<Link to={ link } style={{color: 'black', textDecoration: 'none'}}> { props.activityName } </Link>
 	            </Typography>
 	            <Typography variant={"caption"}>
 	                { props.date }<br/>
@@ -41,7 +43,7 @@ export default function card(props) {
 
 					<GetIcon type={ props.type } />   
 	            </Typography>
-	            <button className="buttonDetail">Detalhes</button>
+	            <button className="buttonDetail" onClick={() => {history.push(link)}}>Detalhes</button>
 	        </CardContent>
 	    </Card>
     );
