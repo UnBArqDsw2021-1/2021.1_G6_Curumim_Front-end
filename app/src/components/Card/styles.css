@@ -1,0 +1,17 @@
+.Header {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -2vh;
+    font-size: 16px;
+}
+
+.buttonDetail {
+    color: #FFFFFF;
+    font-size: 1rem;
+    margin-right: auto;
+    background-color: #6D65D3;
+    height: 5.2vh;
+    width: 25vw;
+    border: none;
+    border-radius: 10vh;
+}
