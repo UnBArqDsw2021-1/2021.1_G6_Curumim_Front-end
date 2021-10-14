@@ -40,7 +40,7 @@
 
 .home-content > hr {
     opacity: 0.5;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .home-content > div {
@@ -52,6 +52,7 @@
 }
 
 .home-content-buttons {
+    display: flex;
     margin-top: 20px;
     flex-wrap: wrap;
     transition: 2s;
@@ -59,4 +60,5 @@
 
 .home-content-first-button {
     margin-right: 20px;
+    margin-bottom: 20px;
 }
