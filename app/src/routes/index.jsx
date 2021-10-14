@@ -14,7 +14,7 @@ import RegisterStudent from '../pages/RegisterStudent';
 import RegisterTeacher from '../pages/RegisterTeacher';
 import RegisterEvent from '../pages/RegisterEvent';
 import RegisterActivity from '../pages/RegisterActivity';
-
+import ActivityDetail from '../pages/ActivityDetail';
 class Routes extends Component {
   render() {
     return (
@@ -31,6 +31,7 @@ class Routes extends Component {
         <RoutesPrivate exact path="/cadastrar-professor" component={RegisterTeacher} />
         <RoutesPrivate exact path="/cadastrar-evento" component={RegisterEvent} />
         <RoutesPrivate exact path="/criar-atividade" component={RegisterActivity} />
+        <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
       </Switch>
     </BrowserRouter>
     );
