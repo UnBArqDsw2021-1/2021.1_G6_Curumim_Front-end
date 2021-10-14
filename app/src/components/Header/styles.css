@@ -2,7 +2,7 @@
     margin-left: auto;
     margin-right: auto;
     padding-top: 8px;
-    padding-bottom: 8px;
+    padding-bottom: 2px;
     font-size: 14px;
     background-color: var(--main-color);
     color: #FFFFFF;
@@ -11,4 +11,5 @@
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+
 }

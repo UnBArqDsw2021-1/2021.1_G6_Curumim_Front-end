@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
+import RoutesPrivate from './Private';
+
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
@@ -18,17 +20,17 @@ class Routes extends Component {
     return (
       <BrowserRouter>
       <Switch>
-        <Route exact path="/" component={Home} />
+        <RoutesPrivate exact path="/" component={Home} />
         <Route exact path="/cadastro" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/lista-turmas" component={ClassList} />
-        <Route exact path="/detalhe-evento" component={EventDetail} />
-        <Route exact path="/menu-responsavel" component={ResponsibleMenu} />
-        <Route exact path="/cadastrar-turma" component={RegisterClass} />
-        <Route exact path="/cadastrar-aluno" component={RegisterStudent} />
-        <Route exact path="/cadastrar-professor" component={RegisterTeacher} />
-        <Route exact path="/cadastrar-evento" component={RegisterEvent} />
-        <Route exact path="/criar-atividade" component={RegisterActivity} />
+        <RoutesPrivate exact path="/lista-turmas" component={ClassList} />
+        <RoutesPrivate exact path="/detalhe-evento" component={EventDetail} />
+        <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
+        <RoutesPrivate exact path="/cadastrar-turma" component={RegisterClass} />
+        <RoutesPrivate exact path="/cadastrar-aluno" component={RegisterStudent} />
+        <RoutesPrivate exact path="/cadastrar-professor" component={RegisterTeacher} />
+        <RoutesPrivate exact path="/cadastrar-evento" component={RegisterEvent} />
+        <RoutesPrivate exact path="/criar-atividade" component={RegisterActivity} />
       </Switch>
     </BrowserRouter>
     );

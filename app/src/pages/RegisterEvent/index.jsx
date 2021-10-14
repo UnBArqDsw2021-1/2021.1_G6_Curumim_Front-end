@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Header from '../../components/Header';
+import SideBar from '../../components/SideBar';
 
 import './styles.css';
 
@@ -14,7 +15,7 @@ function RegisterEvent() {
     name: name,
     description: description,
     date: date,
-    local: local
+    local: local  
   }
 
   return(
