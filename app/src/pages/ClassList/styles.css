@@ -36,3 +36,12 @@
         transform: rotate(360deg);
     }
 }
+
+.margin-post-class {
+    margin: 20px 0;
+}
+
+.span-post-class {
+    font-size: 14px;
+    margin-bottom: 100px;
+}
