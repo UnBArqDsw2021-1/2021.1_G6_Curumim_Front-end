@@ -9,7 +9,7 @@ import HomeTeacherContent from '../../components/HomeTeacherContent'
 
 const Home = () => {
     var userLogged = JSON.parse(localStorage.getItem('user'))
-    const [user, setUser] = useState(userLogged)
+    const [user] = useState(userLogged)
     
     let loginLoading
     if(userLogged) {
