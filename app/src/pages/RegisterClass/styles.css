@@ -87,12 +87,13 @@
   margin-top: 0.5vh;
 }
 
-.student-added > h5 {
-  width: 50%;
-  overflow-x: scroll;
+.student-added > img {
+  height: 15px;
+  width: 15px;
+  margin-top: 2px;
 }
 
-.student-added > img {
-  width: 50%;
-  justify-content: center;
+.student-added > h5 {
+  width: 90%;
+  overflow-x: scroll;
 }

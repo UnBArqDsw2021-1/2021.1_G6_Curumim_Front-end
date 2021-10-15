@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import Header from '../../components/Header';
 
+import Thrash from "../../assets/images/thrash.png";
+
 import './styles.css';
 
 function RegisterClass() {
@@ -175,7 +177,7 @@ function RegisterClass() {
                                 <h5 id={`added-student-${student.name}`}>{student.name}</h5>
                                 <img 
                                     id={`thrash-student-${student.id}`} 
-                                    src="../../assets/images/thrash.png" 
+                                    src={Thrash}
                                     alt="lixo" 
                                     onClick={e => handleRemoveStudents(e)}
                                 />  
