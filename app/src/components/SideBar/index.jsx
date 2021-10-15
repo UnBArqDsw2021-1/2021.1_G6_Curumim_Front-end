@@ -1,18 +1,21 @@
 import React, { Component , useState } from 'react';
 import './styles.css';
 import { IconContext } from 'react-icons';
-import { HiMenuAlt3 } from 'react-icons/hi';
+import { HiMenuAlt3, HiLogout } from 'react-icons/hi';
 import {FaBars, FaCartPlus} from 'react-icons/fa';
 import {IoIosPaper} from 'react-icons/io';
 import {AiOutlineClose, AiFillHome} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import {logout} from '../../utils/storage'
+
+
 
 const SidebarData = [
   {
-  title:'Perfil do Aluno',
-  path:"/",
-  icon:<AiFillHome/>,
-  cName: 'nav-text'
+    title:'Perfil do Aluno',
+    path:"/",
+    icon:<AiFillHome/>,
+    cName: 'nav-text'
   },
   {
   title:'Mensagens',
@@ -21,16 +24,25 @@ const SidebarData = [
   cName: 'nav-text'
   },
   {
-  title:'Centro Educacional',
+    title:'Centro Educacional',
   path:"/",
   icon:<FaCartPlus />,
   cName:'nav-text'
-  }
+}
+
+  // title:'Logout',
+  // path:"/",
+  // icon:<HiLogout />,
+  // cName:'nav-text'
+  // }
 
 ]
 
-    function SideBar() {
-        const [sidebar, setSidebar] = useState(false);
+function SideBar() {
+  function activateLasers(event) {
+      logout()
+  }
+  const [sidebar, setSidebar] = useState(false);
       
         const showSidebar = () => setSidebar(!sidebar);
       
@@ -60,6 +72,12 @@ const SidebarData = [
                       </li>
                     );
                   })}
+                  <li className='nav-textx'>
+                  <HiLogout /> 
+                  <span onClick={activateLasers}>Logout</span>
+
+                  </li>
+                  
                 </ul>
               </nav>
             {/* </IconContext.Provider> */}

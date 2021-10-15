@@ -11,5 +11,9 @@
     position: absolute;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
+}
 
+.Header > img {
+    margin-left: 33%;
+    padding-top: 3px;
 }

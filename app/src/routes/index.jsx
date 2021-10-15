@@ -29,7 +29,7 @@ class Routes extends Component {
         <RoutesPrivate exact path="/cadastrar-turma" component={RegisterClass} />
         <RoutesPrivate exact path="/cadastrar-aluno" component={RegisterStudent} />
         <RoutesPrivate exact path="/cadastrar-professor" component={RegisterTeacher} />
-        <RoutesPrivate exact path="/cadastrar-evento" component={RegisterEvent} />
+        <Route exact path="/cadastrar-evento" component={RegisterEvent} />
         <RoutesPrivate exact path="/criar-atividade" component={RegisterActivity} />
         <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
       </Switch>

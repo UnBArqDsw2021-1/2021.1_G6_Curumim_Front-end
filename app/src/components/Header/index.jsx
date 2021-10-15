@@ -1,10 +1,8 @@
 import React from 'react';
 import './styles.css';
 import SideBar from '../SideBar';
-
 import Back from '../../assets/images/left-arrow-white.png'
 import { useHistory } from "react-router-dom";
-
 import {logout} from '../../utils/storage'
 
 const Header = () => {

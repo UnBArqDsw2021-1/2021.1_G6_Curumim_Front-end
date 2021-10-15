@@ -16,7 +16,7 @@
   .nav-menu {
     background-color: var(--main-color);
     color: #FFFFFF;
-    width: 250px;
+    width: 280px;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -27,8 +27,9 @@
   }
   
   .nav-menu.active {
-    left: 0;
+    left: 33%;
     transition: 350ms;
+
   }
   
   .nav-text {
@@ -38,6 +39,16 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+  }
+
+  .nav-textx {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+    margin-right: auto;
   }
   
   .nav-text a {
@@ -59,6 +70,7 @@
   
   .nav-menu-items {
     width: 100%;
+    margin-right: auto;
   }
   
   .SideBar-toggle {
