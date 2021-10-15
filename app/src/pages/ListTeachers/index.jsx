@@ -23,7 +23,7 @@ const ListTeachers = () => {
 
     const [user] = useState(userLogged)
     const [token] = useState(userToken)
-    const [posts, setPosts] = useState(null)
+    /* const [posts, setPosts] = useState(null) */
     const [loading, setLoading] = useState(null)
 
     useEffect(() => {
@@ -31,7 +31,7 @@ const ListTeachers = () => {
             setLoading(true)
             const resposta = await requestTeachers(token)
             console.log(resposta)
-            setPosts(resposta.professionals)
+            /* setPosts(resposta.professionals) */
             setLoading(false)
         }
         fetchData()
