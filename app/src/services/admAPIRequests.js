@@ -9,5 +9,13 @@ export default {
                 'Authorization': token
             }
         })
+    },
+    registerTeacher: (token) => {
+        return CurumimBackEnd.post('/adm/register-teacher', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': token
+            }
+        })
     }
 }

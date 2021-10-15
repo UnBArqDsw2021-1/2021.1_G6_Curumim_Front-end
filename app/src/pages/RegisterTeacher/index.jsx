@@ -1,24 +1,67 @@
 import React, { useState } from 'react';
 
+import adm from '../../services/admAPIRequests'
+
 import Header from '../../components/Header';
 
 import './styles.css';
 
+async function registeringTeacher(teacher, token) {
+  try {
+      var res = await adm.registerTeacher(token)
+      console.log(token, res)
+
+      if (res.status === 200) {
+          return res.data
+      }
+  } catch (err){
+      console.log(teacher)
+      return { response: null, error: 'Professor já cadastrado' }
+  }
+}
+
 function RegisterTeacher() {
-  const [name, setName] = useState('');
-  const [cpfValue, setCPF] = useState('');
-  const [address, setAdress] = useState('');
-  const [cep, setCEP] = useState('');
-  const [cellphone, setCellphone] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState(null);
+  const [cpfValue, setCPF] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [birthday, setBirthday] = useState(null);
+  const [password, setPassword] = useState(null);
+  const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null)
+
+  async function onSubmit(event) {
+    event.preventDefault();
+
+    setLoading(true);
+
+    const { response, error } = await registeringTeacher(addedTeacher)
+
+    setLoading(false);
+    setError(error);
+  }
+
+  let errorLoginMessage;
+  let loginLoading;
+
+  if (error) {
+    errorLoginMessage = error
+    setTimeout(() => {
+        setError(null)
+    }, 4000)
+  }
+
+  if (loading) {
+    loginLoading = <div className="lds-dual-ring"></div>
+  }
 
   const addedTeacher = {
+    usertype: 1,
     name: name,
     cpf: cpfValue,
-    address: address,
-    cep: cep,
-    cellphone: cellphone,
-    email: email
+    email: email,
+    birthday: birthday,
+    password: password,
+    registration: 15
   }
 
   return(
@@ -36,25 +79,21 @@ function RegisterTeacher() {
             <input type="number" placeholder="CPF do professor" onChange={(e) => setCPF(e.currentTarget.value)}/>
           </div>
           <div className="input-register-teacher">
-            <h4>Endereço:</h4>
-            <input type="text" placeholder="Endereço do professor" onChange={(e) => setAdress(e.currentTarget.value)}/>
-          </div>
-          <div className="input-register-teacher">
-            <h4>CEP:</h4>
-            <input type="number" placeholder="CEP do professor" onChange={(e) => setCEP(e.currentTarget.value)}/>
-          </div>
-          <div className="input-register-teacher">
-            <h4>Celular:</h4>
-            <input type="number" placeholder="Celular do professor" onChange={(e) => setCellphone(e.currentTarget.value)}/>
+            <h4>Data de nascimento:</h4>
+            <input type="date" placeholder="Dia de nascimento do professor" onChange={(e) => setBirthday(e.currentTarget.value)}/>
           </div>
           <div className="input-register-teacher">
             <h4>E-mail:</h4>
             <input type="email" placeholder="E-mail do professor" onChange={(e) => setEmail(e.currentTarget.value)}/>
           </div>
+          <div className="input-register-teacher">
+            <h4>Senha</h4>
+            <input type="text" placeholder="Senha de acesso para o professor" onChange={(e) => setPassword(e.currentTarget.value)}/>
+          </div>
         </form>
         <div className="adm-register-buttons">
             <button className="adm-cancel-register">Cancelar</button>
-            <button className="adm-register-button" onClick={() => console.log(addedTeacher)}>Cadastrar</button>
+            <button type="submit" className="adm-register-button" onClick={() => registeringTeacher(addedTeacher)}>{loginLoading} Cadastrar</button>
         </div>
       </div>
     </section>

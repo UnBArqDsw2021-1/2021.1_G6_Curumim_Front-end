@@ -20,7 +20,9 @@
 .profile-image {
     height: 80px;
     width: 80px;
+    margin-top: 20px;
     margin-bottom: 20px;
+    z-index: 1;
 }
 
 .home-body {
