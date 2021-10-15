@@ -1,0 +1,21 @@
+.home-div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dual-ring-center {
+    margin: auto;
+    margin-top: 100px;
+}
+
+@media only screen and (min-width:600px) {
+    .auxdoaux {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .auxdoaux > div {
+        flex-grow: 1;
+        max-width: 300px;
+    }
+}

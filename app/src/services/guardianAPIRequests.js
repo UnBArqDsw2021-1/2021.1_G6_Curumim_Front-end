@@ -1,7 +1,7 @@
 import CurumimBackEnd from './config.js'
 
-function listGuardians(token) {
-    return CurumimBackEnd.get('/adm/list-guardians', {
+function board(token, idChild) {
+    return CurumimBackEnd.get(`/guardian/board/${idChild}`, {
         headers: {
             'Content-Type': 'application/json',
             'Authorization': token
@@ -9,8 +9,8 @@ function listGuardians(token) {
     })
 }
 
-const adm = {
-    listGuardians
+const guardian = {
+    board
 }
 
-export default adm
+export default guardian
