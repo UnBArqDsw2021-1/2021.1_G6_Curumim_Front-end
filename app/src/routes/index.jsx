@@ -13,7 +13,6 @@ import ScheduleDetail from '../pages/ScheduleDetail';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
 import ListTeachers from '../pages/ListTeachers'
-import ActivityDetail from '../pages/ActivityDetail';
 import ProfileCE from '../pages/ProfileCE';
 
 class Routes extends Component {
