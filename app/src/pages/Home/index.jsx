@@ -28,7 +28,7 @@ const Home = () => {
             <div className="home-profile">
                 <div className="profile-components">
                     <img className="profile-image" src={admPerfil} alt=''/>
-                    {/* <h3>{user.name}</h3> */}
+                    <h3>{user.name}</h3>
                 </div>
             </div>
             <div className="home-body">

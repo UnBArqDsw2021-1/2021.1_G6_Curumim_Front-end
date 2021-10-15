@@ -1,0 +1,22 @@
+.post-card {
+    margin: 20px 0;
+}
+
+.post-card > div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-card > p {
+    margin-bottom: 20px;
+}
+
+.post-card-title {
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.post-card-sub-title {
+    font-size: 12px;
+}

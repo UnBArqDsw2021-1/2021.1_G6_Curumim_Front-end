@@ -1,11 +1,16 @@
 import CurumimBackEnd from './config.js'
 
-export default {
-    login:(data) => {
-        return CurumimBackEnd.post('/login', data)
-    },
-
-    register:(data) => {
-        return CurumimBackEnd.post('/register-guardian', data)
-    }
+function login(data) {
+    return CurumimBackEnd.post('/login', data)
 }
+
+function register(data) {
+    return CurumimBackEnd.post('/register-guardian', data)
+}
+
+const auth = {
+    login, 
+    register
+}
+
+export default auth
