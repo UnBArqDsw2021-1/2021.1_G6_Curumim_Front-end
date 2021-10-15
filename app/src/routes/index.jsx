@@ -11,6 +11,7 @@ import ClassList from '../pages/ClassList';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
 import ListTeachers from '../pages/ListTeachers'
+import ActivityDetail from '../pages/ActivityDetail';
 
 class Routes extends Component {
   render() {
@@ -25,6 +26,7 @@ class Routes extends Component {
             <RoutesPrivate exact path="/detalhe-evento" component={EventDetail} />
             <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
             <RoutesPrivate exact path="/lista-professores" component={ListTeachers} />
+            <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
           </Switch>
         </StoreProvider>
       </BrowserRouter>
