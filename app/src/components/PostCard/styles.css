@@ -1,13 +1,5 @@
 .post-card {
-    margin-bottom: 20px;
-}
-
-.post-card > div > h3 {
-}
-
-.post-card > div > span {
-    font-size: 14px;
-    color: var(--main-color)
+    margin: 20px 0;
 }
 
 .post-card > div {
@@ -16,6 +8,15 @@
     margin-bottom: 20px;
 }
 
-.post-card > button {
-    margin-left: auto
+.post-card > p {
+    margin-bottom: 20px;
+}
+
+.post-card-title {
+    color: var(--main-color);
+    font-size: 18px;
+}
+
+.post-card-sub-title {
+    font-size: 12px;
 }

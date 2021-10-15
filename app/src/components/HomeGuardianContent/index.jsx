@@ -55,6 +55,7 @@ const HomeGuardianContent = () => {
                     title={post.title}
                     updatedAt={post.updatedAt}
                 />
+                <hr />
             </div>
         });
     }
@@ -63,8 +64,9 @@ const HomeGuardianContent = () => {
         <div className='home-div'>
             <h3>Mural</h3>
             {loginLoading}
-            
-            {listPosts}
+            <div className='auxdoaux'>
+                {listPosts}
+            </div>
         </div>
     )
 }
