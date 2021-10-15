@@ -24,17 +24,6 @@
     color: white;
 }
 
-.App-header-detail {
-    background-color: #FFFFFF;
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: #000000;
-}
-
 .App-link {
     color: #61dafb;
 }
@@ -70,4 +59,56 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10vh;
+}
+
+.activity-body {
+    margin: 20px;
+    position: relative;
+    text-align: justify;
+}
+
+.text-gray {
+    color: #7e7e7e;
+}
+
+.text-purple {
+    color: #483EC8;
+}
+
+.edit-button {
+    color: #483ec8;
+    font-size: 1rem;
+    margin: 3px;
+    background-color: #FFFFFF;
+    height: 37px;
+    width: 80px;
+    border: 2px solid #483ec8;
+    border-radius: 30px;
+}
+
+.delete-button {
+    color: #cc2c2c;
+    font-size: 1rem;
+    margin: 3px;
+    background-color: #FFFFFF;
+    height: 37px;
+    width: 80px;
+    border: 2px solid #cc2c2c;
+    border-radius: 30px;
+}
+
+.content-texts-header {
+    width: 97%;
+    padding-right: 90px;
+    height: auto;
+    position: relative;
+}
+
+.content-buttons-header {
+    width: 90px;
+    padding: 3px;
+    height: auto;
+    position: absolute;
+    right: 0px;
+    top: 0px;
 }
