@@ -7,6 +7,8 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import ClassList from '../pages/ClassList';
+import ActivityDetail from '../pages/ActivityDetail';
+import ScheduleDetail from '../pages/ScheduleDetail';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
 import RegisterClass from '../pages/RegisterClass';
@@ -16,6 +18,7 @@ import RegisterEvent from '../pages/RegisterEvent';
 import RegisterActivity from '../pages/RegisterActivity';
 import ActivityDetail from '../pages/ActivityDetail';
 import ListTeachers from '../pages/ListTeachers'
+import ProfileCE from '../pages/ProfileCE';
 
 class Routes extends Component {
   render() {
@@ -35,6 +38,8 @@ class Routes extends Component {
           <Route exact path="/criar-atividade" component={RegisterActivity} />
           <RoutesPrivate exact path="/lista-professores" component={ListTeachers} />
           <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
+          <RoutesPrivate exact path="/detalhe-agenda/:value" component={ScheduleDetail} />
+          <RoutesPrivate exact path="/perfil-ce" component={ProfileCE}
         </Switch>
       </BrowserRouter>
     );

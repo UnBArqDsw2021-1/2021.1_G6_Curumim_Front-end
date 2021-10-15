@@ -1,0 +1,89 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.profile-body {
+    position: absolute;
+    left: auto;
+    top: 150px;
+}
+
+.top-box {
+    position: absolute;
+    width: 100%;
+    height: 185px;
+    top: auto;
+
+    background: #6D65D3;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.Image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schoolName {
+    width: 70%;
+    height: 29px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 114px;
+    text-align: center;
+
+    font-family: Light 300;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+
+.Description-body {
+    margin-top: 250px;
+    position: relative;
+    width: 90%;
+    height: 378px;
+    left: 26px;
+    text-align: justify;
+    font-family: Light 300;
+    align-items: center;
+
+}
