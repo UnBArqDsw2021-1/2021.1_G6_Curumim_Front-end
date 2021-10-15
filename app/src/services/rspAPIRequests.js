@@ -1,9 +1,8 @@
 import CurumimBackEnd from './config.js'
 
 var API = {
-    getActivity:(token) => {
-        console.log(token)
-        return CurumimBackEnd.get('/guardian/activity/1', {
+    getActivity:(token, id) => {
+        return CurumimBackEnd.get('/guardian/activity/' + id, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': token
@@ -11,7 +10,7 @@ var API = {
         })
     },
 
-    /*getActivities: [
+    getActivities: [
 	 			{"nome": "Atividade 1", "data": "30/05/2022", "descricao": "Descricao da atividade 1", "id": "1"},
         		{"nome": "Atividade 2", "data": "30/05/2022", "descricao": "Descricao da atividade 2", "id": "2"},
         		{"nome": "Atividade 3", "data": "30/05/2022", "descricao": "Descricao da atividade 3", "id": "3"}
@@ -30,7 +29,6 @@ var API = {
     ],
 
     getScheduleById: {"nome": "Agenda 1", "data": "30/05/2022", "descricao": "Descricao da agenda 1", "id": "1"},
-    */
 }
 
 export default API;
