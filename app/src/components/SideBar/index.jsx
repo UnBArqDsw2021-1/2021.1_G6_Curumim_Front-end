@@ -2,7 +2,6 @@ import React, { Component , useState } from 'react';
 import './styles.css';
 import { HiMenuAlt3, HiLogout } from 'react-icons/hi';
 import {FaBars, FaCartPlus} from 'react-icons/fa';
-import {IoIosPaper} from 'react-icons/io';
 import {AiOutlineClose, AiFillHome} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import {logout} from '../../utils/storage'
@@ -11,20 +10,14 @@ import {logout} from '../../utils/storage'
 
 const SidebarData = [
   {
-    title:'Perfil do Aluno',
+    title:'Perfil',
     path:"/",
     icon:<AiFillHome/>,
     cName: 'nav-text'
   },
   {
-    title:'Mensagens',
-    path:"/",
-    icon:<IoIosPaper />,
-    cName: 'nav-text'
-  },
-  {
     title:'Centro Educacional',
-    path:"/",
+    path:"/perfil-ce",
     icon:<FaCartPlus />,
     cName:'nav-text'
   }
