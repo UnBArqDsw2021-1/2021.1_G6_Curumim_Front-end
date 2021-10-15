@@ -12,7 +12,7 @@ import ActivityDetail from '../pages/ActivityDetail';
 import ScheduleDetail from '../pages/ScheduleDetail';
 import EventDetail from '../pages/EventDetail';
 import ResponsibleMenu from '../pages/ResponsibleMenu';
-import ActivityDetail from '../pages/ActivityDetail';
+import ProfileCE from '../pages/ProfileCE';
 
 class Routes extends Component {
   render() {
@@ -28,6 +28,7 @@ class Routes extends Component {
             <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
             <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
             <RoutesPrivate exact path="/detalhe-agenda/:value" component={ScheduleDetail} />
+            <Route exact path="/perfil-ce" component={ProfileCE} />
           </Switch>
         </StoreProvider>
       </BrowserRouter>
