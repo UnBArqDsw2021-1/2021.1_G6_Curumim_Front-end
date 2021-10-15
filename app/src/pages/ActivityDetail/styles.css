@@ -37,6 +37,30 @@
     }
 }
 
+.activityName {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.data {
+    margin-left: 10vw;
+    margin-right: auto;
+    margin-top: 5vh;
+}
+
+.text {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+
+.button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10vh;
+}
+
 .activity-body {
     margin: 20px;
     position: relative;

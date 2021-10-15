@@ -37,11 +37,33 @@
     }
 }
 
-.margin-post-class {
-    margin: 20px 0;
+.App-header-lista-turma {
+    background-color: #FFFFFF;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: #000000;
 }
 
-.span-post-class {
-    font-size: 14px;
-    margin-bottom: 100px;
+.title {
+    margin-left: 7vw;
+    margin-right: auto;
+    margin-top: 7vw;
+    margin-bottom: 2vw;
+    color: #000000;
 }
+
+.classList {
+    width: 366px;
+    margin-left: 15vw;
+    margin-right: auto;
+    margin-top: 2vh;
+    line-height: 2em;
+    color: #000000;
+    word-spacing: 200px;
+    box-shadow: red;
+}
+
