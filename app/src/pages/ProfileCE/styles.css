@@ -47,7 +47,7 @@
     position: absolute;
     width: 100%;
     height: 185px;
-    margin-top: auto;
+    top: auto;
 
     background: #6D65D3;
     border-radius: 0px 0px 20px 20px;

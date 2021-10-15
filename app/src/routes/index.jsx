@@ -28,7 +28,7 @@ class Routes extends Component {
             <RoutesPrivate exact path="/menu-responsavel" component={ResponsibleMenu} />
             <RoutesPrivate exact path="/detalhe-atividade/:value" component={ActivityDetail} />
             <RoutesPrivate exact path="/detalhe-agenda/:value" component={ScheduleDetail} />
-            <Route exact path="/perfil-ce" component={ProfileCE} />
+            <RoutesPrivate exact path="/perfil-ce" component={ProfileCE} />
           </Switch>
         </StoreProvider>
       </BrowserRouter>
