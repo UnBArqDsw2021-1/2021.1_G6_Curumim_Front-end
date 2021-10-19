@@ -29,8 +29,7 @@ const ListTeachers = () => {
     useEffect(() => {
         async function fetchData() {
             setLoading(true)
-            const resposta = await requestTeachers(token)
-            console.log(resposta)
+            await requestTeachers(token)
             /* setPosts(resposta.professionals) */
             setLoading(false)
         }

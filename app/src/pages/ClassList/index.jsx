@@ -32,11 +32,9 @@ const ClassList = () => {
         async function fetchData() {
             setLoading(true)
             const resposta = await requestMural(token)
-			console.log(resposta)
 
             setPosts(resposta.list)
             setLoading(false)
-			console.log(posts)
         }
         fetchData()
     }, [user, token]);

@@ -4,9 +4,7 @@ import './styles.css';
 const PostCard = ({description, fk_idChild, fk_idProfessional, id, title, updatedAt}) => {
     let postData
     if (updatedAt) {
-        console.log(typeof(updatedAt))
         let data = new Date(updatedAt);
-        console.log(data)
         postData = ((data.getDate() )) + "/" + ((data.getMonth() + 1)) + "/" + data.getFullYear(); 
     }
     return (

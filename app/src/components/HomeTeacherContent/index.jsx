@@ -5,7 +5,6 @@ const HomeTeacherContent = () => {
     const history = useHistory()
 
     function Redirect () {
-        console.log('ok')
         history.push('/lista-turmas')
     }
     return (

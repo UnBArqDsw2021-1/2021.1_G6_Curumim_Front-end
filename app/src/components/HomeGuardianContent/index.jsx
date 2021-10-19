@@ -31,7 +31,9 @@ const HomeGuardianContent = () => {
         async function fetchData() {
             setLoading(true)
             const resposta = await requestMural(token)
-            setPosts(resposta)
+            if (!(resposta.error)) {
+                setPosts(resposta)   
+            }
             setLoading(false)
         }
         fetchData()
